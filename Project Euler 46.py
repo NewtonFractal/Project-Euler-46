@@ -18,21 +18,16 @@ def primefinder(number):
         if prime == True:
             primelist.append(y)
 
-
 primefinder(115)
-
 
 def Goldbachs_other_conjecture(start):
     for x in odd_composites:
         found = False
         for y in primelist:
-            if found == True:
+            if math.sqrt((x-y)/2).is_integer() == False:
+                continue
+            else:
+                found = True
                 break
-            for z in range(1,int(math.sqrt(x))):
-                if x != y + 2 * z ** 2:
-                    continue
-                else:
-                    found = True
-                    break
 
 Goldbachs_other_conjecture(12)
