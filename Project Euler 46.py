@@ -26,7 +26,7 @@ def Goldbachs_other_conjecture(start):
     for x in odd_composites:
         found = False
         for y in primelist:
-            if x < y +2:
+            if found == True:
                 break
             for z in range(1,int(math.sqrt(x))):
                 if x != y + 2 * z ** 2:
