@@ -22,8 +22,6 @@ primefinder(6000)
 
 def Goldbachs_other_conjecture(found):
     for x in odd_composites:
-        if found == False:
-            break
         for y in primelist:
             if x > y:
                 if math.sqrt((x-y)/2).is_integer() == False:
@@ -32,8 +30,7 @@ def Goldbachs_other_conjecture(found):
                     break
             else:
                 print(x)
-                found = False
-                break
+                return None
 
 Goldbachs_other_conjecture(True)
 
