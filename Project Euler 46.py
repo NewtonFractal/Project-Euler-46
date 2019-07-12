@@ -20,7 +20,7 @@ def primefinder(number):
 
 primefinder(6000)
 
-def Goldbachs_other_conjecture(found):
+def Goldbachs_other_conjecture():
     for x in odd_composites:
         for y in primelist:
             if x > y:
@@ -32,7 +32,7 @@ def Goldbachs_other_conjecture(found):
                 print(x)
                 return None
 
-Goldbachs_other_conjecture(True)
+Goldbachs_other_conjecture()
 
 end = time.time()
 print(end - start)
