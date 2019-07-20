@@ -8,7 +8,7 @@ def primefinder(number):
     prime = [True] * (number+1)
     for y in range(3,int(math.sqrt(number+1)),2):
         if prime[y] == True:
-            for x in range(y+y, number + 1,y):
+            for x in range(y*y, number + 1,y+y):
                 prime[x] = False
     for x in range(3,number+1,2):
         if prime[x] == True:
